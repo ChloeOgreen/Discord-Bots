@@ -1,0 +1,36 @@
+import discord
+from discord.ext import commands
+
+intents = discord.Intents.default()
+intents.typing = False
+intents.presences = False
+intents.message_content = True
+
+
+bot = commands.Bot(command_prefix= '!', intents=intents)
+
+@bot.event
+async def on_ready():
+        print("Use me! :3")
+
+@bot.event
+async def on_ready():
+    await bot.change_presence(
+        activity=discord.Game(name="League of Legends"),
+        status=discord.Status.online,
+    )
+
+@bot.command()
+async def hello(ctx):
+    await ctx.send("Hello, I am Shouko Nishimiya")
+
+@bot.command()
+async def Hyb(ctx):
+    await ctx.send("Not great. I'm on League of Legends. :(")
+
+@bot.command()
+async def hi(ctx):
+    await ctx.send("Hi, Love :)")
+
+bot.run(TOKEN)
+
