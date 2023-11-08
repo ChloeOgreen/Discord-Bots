@@ -25,7 +25,7 @@ async def hello(ctx):
     await ctx.send("Hello, I am Shouko Nishimiya")
 
 @bot.command()
-async def Hyb(ctx):
+async def hyb(ctx):
     await ctx.send("Not great. I'm on League of Legends. :(")
 
 @bot.command()
